@@ -57,7 +57,7 @@
 
 - Free SQL Database[https://www.freesqldatabase.com/]
 
-# Backend With Expressand MySQL
+# Backend With Express and MySQL
 
         import express from "express";
         import mysql from "mysql";
@@ -83,3 +83,19 @@
         });
         });
         });
+
+## put sensitive data in .env file
+
+        .env file
+
+        NUTZER=webuser (can not be USER)
+        PASSWORD=passpass
+
+        npm i dotenv
+
+        import dotenv from 'dotenv';
+
+        dotenv.config();
+
+        user: process.env.USER,
+        password: process.env.PASSWORD,

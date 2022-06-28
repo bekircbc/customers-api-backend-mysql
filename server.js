@@ -6,7 +6,7 @@ dotenv.config();
 const app = express();
 const port = 3044;
 
-const user = process.env.USER;
+const nutzer = process.env.NUTZER;
 const password = process.env.PASSWORD;
 
 app.get("/", (req, res) => {
@@ -16,8 +16,8 @@ app.get("/", (req, res) => {
 app.get("/customers", (req, res) => {
   const connection = mysql.createConnection({
     host: "localhost",
-    user: "webuser", //`${user}`, //process.env.USER
-    password: "passpass", //`${password}`, //process.env.PASSWORD
+    user: nutzer, //`${user}`, //process.env.USER
+    password, //"passpass", //`${password}`, //process.env.PASSWORD
     database: "northwind",
   });
   connection.connect((err) => {
