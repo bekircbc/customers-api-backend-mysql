@@ -99,3 +99,24 @@
 
         user: process.env.USER,
         password: process.env.PASSWORD,
+
+## GUI intallation for MySQL
+
+        ## install MySQL Workbench
+        snap install mysql-workbench-community
+
+        ## setting up connection for webuser. (there is an error)
+        sudo snap connect mysql-workbench-community:password-manager-service :password-manager-service
+
+        ## login as webuser
+
+        if you hae an error on getting data, install DBeaver
+        sudo snap install dbeaver-ce
+
+        ## explore databases
+
+        show databases;
+        use northwind;
+        show tables;
+        select \* from customers;
+        SELECT company,last_name,first_name FROM customers;
